@@ -11,7 +11,7 @@ services:
       #- ./theme-name/trunk/:/var/www/html/wp-content/themes/theme-name # Theme development
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_NAME: autoswipe
+      WORDPRESS_DB_NAME: wordpress
       WORDPRESS_DB_USER: root
       WORDPRESS_DB_PASSWORD: password
     depends_on:
@@ -30,7 +30,7 @@ services:
     volumes:
       - ./.db_mysql:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: autoswipe
+      MYSQL_DATABASE: wordpress
       MYSQL_ROOT_PASSWORD: password
     networks:
       - wordpress-network
